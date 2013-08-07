@@ -1,4 +1,4 @@
-package co.com.carp.controller;
+package co.com.carp.petcity.controller;
 
 
 public class LoginController {

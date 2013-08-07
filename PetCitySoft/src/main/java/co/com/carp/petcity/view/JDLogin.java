@@ -23,7 +23,8 @@ import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import co.com.carp.controller.LoginController;
+import co.com.carp.petcity.controller.LoginController;
+import co.com.carp.petcity.util.Configuration;
 
 public class JDLogin extends JDialog implements ActionListener {
 
@@ -44,7 +45,7 @@ public class JDLogin extends JDialog implements ActionListener {
 	public JDLogin() {
 		this.setJMenuBar(this.createMenuBar());
 		this.setModalityType(ModalityType.APPLICATION_MODAL);
-		this.setIconImage(Toolkit.getDefaultToolkit().getImage(JDLogin.class.getResource("/images/dog1.png")));
+		this.setIconImage(Toolkit.getDefaultToolkit().getImage(JDLogin.class.getResource("/co/com/carp/petcity/image/dog1.png")));
 		this.setBackground(new Color(0, 100, 0));
 		this.setResizable(false);
 		this.setTitle("Pet city soft- Login");
@@ -100,7 +101,7 @@ public class JDLogin extends JDialog implements ActionListener {
 		jpPrincipal.add(jbtCancel);
 		
 		JLabel jlbPetCityImage = new JLabel("");
-		jlbPetCityImage.setIcon(new ImageIcon(JDLogin.class.getResource("/images/dog-city-logo.png")));
+		jlbPetCityImage.setIcon(new ImageIcon(JDLogin.class.getResource("/co/com/carp/petcity/image/dog-city-logo.png")));
 		jlbPetCityImage.setBounds(0, 0, 382, 300);
 		jpPrincipal.add(jlbPetCityImage);
 		
@@ -146,6 +147,7 @@ public class JDLogin extends JDialog implements ActionListener {
 		if (evt.getSource().equals(jbtLogin)) {
 			if(loginCtrl.doAcceptAction(this.jtfUser.getText(), this.jpfPassword.getPassword())) {
 				this.setVisible(false);
+				Configuration.getInstance().readConfiguration();
 				new JFPetAndOwnerInfoTab().setVisible(true);
 			}
 		} else if (evt.getSource().equals(jbtCancel)) {

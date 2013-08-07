@@ -150,7 +150,7 @@ public class JPPetInfo extends JPanel implements ActionListener {
 		jdcBornDate.getModel().setDate(Calendar.getInstance().get(Calendar.YEAR), 
 				Calendar.getInstance().get(Calendar.MONTH), 
 				Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
-		((JButton)jdcBornDate.getComponent(1)).setIcon(new ImageIcon(JPPetInfo.class.getResource("/images/calendar.png")));
+		((JButton)jdcBornDate.getComponent(1)).setIcon(new ImageIcon(JPPetInfo.class.getResource("/co/com/carp/petcity/image/calendar.png")));
 		((JButton)jdcBornDate.getComponent(1)).setText("");
 		((Component) jdcBornDate).setBounds(150, 160, 170, 25);
 		jpnGeneralDetail.add(jlbPetBornDate);
@@ -230,7 +230,7 @@ public class JPPetInfo extends JPanel implements ActionListener {
 		jdcDewormingDate.getModel().setDate(Calendar.getInstance().get(Calendar.YEAR), 
 				Calendar.getInstance().get(Calendar.MONTH), 
 				Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
-		((JButton)jdcDewormingDate.getComponent(1)).setIcon(new ImageIcon(JPPetInfo.class.getResource("/images/calendar.png")));
+		((JButton)jdcDewormingDate.getComponent(1)).setIcon(new ImageIcon(JPPetInfo.class.getResource("/co/com/carp/petcity/image/calendar.png")));
 		((JButton)jdcDewormingDate.getComponent(1)).setText("");
 		((Component) jdcDewormingDate).setBounds(170, 70, 170, 25);
 		jpnOthersData.add(jlbDewormingDate);
@@ -254,7 +254,7 @@ public class JPPetInfo extends JPanel implements ActionListener {
 		jpnPetImage.setBounds(380, 70, 360, 390);
 		jpnPetImage.setBackground(new Color(250, 245, 245));
 		
-		jlbPhoto = new JLabel(new ImageIcon(JPPetInfo.class.getResource("/images/background-white.png")));
+		jlbPhoto = new JLabel(new ImageIcon(JPPetInfo.class.getResource("/co/com/carp/petcity/image/background-white.png")));
 		JScrollPane scrollPane = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.getViewport().add(jlbPhoto);
 		jpnPetImage.add(scrollPane, BorderLayout.CENTER);

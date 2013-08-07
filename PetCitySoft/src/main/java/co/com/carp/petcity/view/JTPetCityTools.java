@@ -49,11 +49,11 @@ public class JTPetCityTools extends JToolBar implements ActionListener {
 	 * Creates a new pet and owner tool bar, and it enables its buttons to receive the users' interaction. 
 	 */
 	public void createPetAndOwnerToolBar() {
-		JButton jbtNew = new JButton(new ImageIcon(JTPetCityTools.class.getResource("/co/com/carp/image/add_tb_button.png")));
+		JButton jbtNew = new JButton(new ImageIcon(JTPetCityTools.class.getResource("/co/com/carp/petcity/image/add_tb_button.png")));
 		jbtNew.addActionListener(this);
 		this.add(jbtNew);
 		this.addSeparator();
-		JButton jbtSave = new JButton(new ImageIcon(JTPetCityTools.class.getResource("/co/com/carp/image/disk_blue_tb_button.png")));
+		JButton jbtSave = new JButton(new ImageIcon(JTPetCityTools.class.getResource("/co/com/carp/petcity/image/disk_blue_tb_button.png")));
 		jbtSave.addActionListener(this);
 		this.add(jbtSave);
 		this.addSeparator();
