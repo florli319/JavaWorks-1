@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.BevelBorder;
 
-import co.com.carp.petcity.controller.PetAndOwnerInfoTabController;
+import co.com.carp.controller.PetAndOwnerInfoTabController;
 import co.com.carp.petcity.entity.Owner;
 
 public class JFPetAndOwnerInfoTab extends JFrame implements ActionListener, Observer {
@@ -39,7 +39,7 @@ public class JFPetAndOwnerInfoTab extends JFrame implements ActionListener, Obse
 		Set<Owner> ownerSet = this.controller.queryOwnerInfo("");
 		//Create screen components
 		this.setTitle("Pet city soft- Propietarios");
-		this.setIconImage(Toolkit.getDefaultToolkit().getImage(JFPetAndOwnerInfoTab.class.getResource("/co/com/carp/petcity/image/dog1.png")));
+		this.setIconImage(Toolkit.getDefaultToolkit().getImage(JFPetAndOwnerInfoTab.class.getResource("/images/dog1.png")));
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLayout(new BorderLayout());
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

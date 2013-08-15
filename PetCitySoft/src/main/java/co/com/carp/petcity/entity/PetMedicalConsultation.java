@@ -5,11 +5,11 @@ import java.util.Date;
 import java.util.HashSet;
 
 /**
- * This class is attempt to manage pets' medical consultation. 
+ * This class is attempt to manage pets medical consultation. 
  * 
  * @author Carlos Rodriguez
  * */
-public class MedicalConsultation implements Comparable<MedicalConsultation> {
+public class PetMedicalConsultation implements Comparable<PetMedicalConsultation> {
 	
 	/**
 	 * Identification from database
@@ -246,11 +246,11 @@ public class MedicalConsultation implements Comparable<MedicalConsultation> {
 
 	@Override
 	public boolean equals(Object arg) {
-		if (arg == null || !(arg instanceof MedicalConsultation)) {
+		if (arg == null || !(arg instanceof PetMedicalConsultation)) {
 			return false;
 		}
-		if  (!this.consultationDate.equals(((MedicalConsultation)arg).consultationDate)
-				|| this.identification != ((MedicalConsultation)arg).identification) {
+		if  (!this.consultationDate.equals(((PetMedicalConsultation)arg).consultationDate)
+				|| this.identification != ((PetMedicalConsultation)arg).identification) {
 			return false;
 		}
 		return true;
@@ -278,7 +278,7 @@ public class MedicalConsultation implements Comparable<MedicalConsultation> {
 	}
 
 	@Override
-	public int compareTo(MedicalConsultation anotherConsultation) {
+	public int compareTo(PetMedicalConsultation anotherConsultation) {
 		return this.consultationDate.compareTo(anotherConsultation.consultationDate);
 	}
 }

@@ -102,7 +102,7 @@ public class JPOwnerInfo extends JPanel {
 		jtfOwnerAddress = new JTextField();
 		jtfOwnerAddress.setBounds(100, 80, 250, 20);
 		jtfOwnerAddress.setFont(verdanaPlain);
-		JLabel jlbOwnerAddressIcon = new JLabel(new ImageIcon(JPOwnerInfo.class.getResource("/co/com/carp/petcity/image/home.png")));
+		JLabel jlbOwnerAddressIcon = new JLabel(new ImageIcon(JPOwnerInfo.class.getResource("/images/home.png")));
 		jlbOwnerAddressIcon.setBounds(360, 80, 24, 24);
 		jpnOwnerDetail.add(jlbOwnerAddress);
 		jpnOwnerDetail.add(jtfOwnerAddress);
@@ -114,7 +114,7 @@ public class JPOwnerInfo extends JPanel {
 		jtfOwnerPhone = new JTextField();
 		jtfOwnerPhone.setBounds(450, 20, 150, 20);
 		jtfOwnerPhone.setFont(verdanaPlain);
-		JLabel jlbOwnerPhoneIcon = new JLabel(new ImageIcon(JPOwnerInfo.class.getResource("/co/com/carp/petcity/image/telephone.png")));
+		JLabel jlbOwnerPhoneIcon = new JLabel(new ImageIcon(JPOwnerInfo.class.getResource("/images/telephone.png")));
 		jlbOwnerPhoneIcon.setBounds(610, 20, 24, 24);
 		jpnOwnerDetail.add(jlbOwnerPhone);
 		jpnOwnerDetail.add(jtfOwnerPhone);
@@ -127,7 +127,7 @@ public class JPOwnerInfo extends JPanel {
 		jtfOwnerCellphone = new JTextField();
 		jtfOwnerCellphone.setBounds(450, 50, 150, 20);
 		jtfOwnerCellphone.setFont(verdanaPlain);
-		JLabel jlbOwnerCellphoneIcon = new JLabel(new ImageIcon(JPOwnerInfo.class.getResource("/co/com/carp/petcity/image/cellphone.png")));
+		JLabel jlbOwnerCellphoneIcon = new JLabel(new ImageIcon(JPOwnerInfo.class.getResource("/images/cellphone.png")));
 		jlbOwnerCellphoneIcon.setBounds(610, 50, 24, 24);
 		jpnOwnerDetail.add(jlbOwnerCellphone);
 		jpnOwnerDetail.add(jtfOwnerCellphone);
@@ -139,7 +139,7 @@ public class JPOwnerInfo extends JPanel {
 		jtfOwnerEmail = new JTextField();
 		jtfOwnerEmail.setBounds(100, 110, 300, 20);
 		jtfOwnerEmail.setFont(verdanaPlain);
-		JLabel jlbOwnerEmailIcon = new JLabel(new ImageIcon(JPOwnerInfo.class.getResource("/co/com/carp/petcity/image/at.png")));
+		JLabel jlbOwnerEmailIcon = new JLabel(new ImageIcon(JPOwnerInfo.class.getResource("/images/at.png")));
 		jlbOwnerEmailIcon.setBounds(410, 110, 24, 24);
 		jpnOwnerDetail.add(jlbOwnerEmail);
 		jpnOwnerDetail.add(jtfOwnerEmail);

@@ -50,7 +50,7 @@ public class Pet {
 	/**
 	 * Pet's drenching set
 	 */
-	private HashSet<PetDrenching> drenching;
+	private HashSet<Drenching> drenching;
 	
 	/**
 	 * Pet's reproduction
@@ -70,12 +70,7 @@ public class Pet {
 	/**
 	 * It contains all pet's clinic history, it includes all medical consultations.
 	 */
-	private ClinicHistory clinicHistory;
-	
-	/**
-	 * Notification message set
-	 */
-	private TreeSet<Notification> notificationSet;
+	private PetClinicHistory clinicHistory;
 
 	/**
 	 * @return the identification
@@ -178,14 +173,14 @@ public class Pet {
 	/**
 	 * @return the drenching
 	 */
-	public HashSet<PetDrenching> getDrenching() {
+	public HashSet<Drenching> getDrenching() {
 		return drenching;
 	}
 
 	/**
 	 * @param drenching the drenching to set
 	 */
-	public void setDrenching(HashSet<PetDrenching> drenching) {
+	public void setDrenching(HashSet<Drenching> drenching) {
 		this.drenching = drenching;
 	}
 
@@ -234,29 +229,15 @@ public class Pet {
 	/**
 	 * @return the clinicHistory
 	 */
-	public ClinicHistory getClinicHistory() {
+	public PetClinicHistory getClinicHistory() {
 		return clinicHistory;
 	}
 
 	/**
 	 * @param clinicHistory the clinicHistory to set
 	 */
-	public void setClinicHistory(ClinicHistory clinicHistory) {
+	public void setClinicHistory(PetClinicHistory clinicHistory) {
 		this.clinicHistory = clinicHistory;
-	}
-	
-	/**
-	 * @return the notificationSet
-	 */
-	public TreeSet<Notification> getNotificationSet() {
-		return notificationSet;
-	}
-
-	/**
-	 * @param notificationSet the notificationSet to set
-	 */
-	public void setNotificationSet(TreeSet<Notification> notificationSet) {
-		this.notificationSet = notificationSet;
 	}
 
 	@Override
@@ -278,7 +259,6 @@ public class Pet {
 		int hashCode = 85;
 		hashCode = hashCode * name.hashCode() + type.hashCode()
 				+ bornDate.hashCode() + bornPlace.hashCode();
-		hashCode += ((notificationSet == null) ? 0 : notificationSet.hashCode());
 		return hashCode;
 	}
 
@@ -292,7 +272,6 @@ public class Pet {
 				+ ", bornDate=" + bornDate + ", bornPlace=" + bornPlace
 				+ ", drenching=" + drenching + ", reproduction=" + reproduction
 				+ ", photo=" + photo + ", vaccineSet=" + vaccineSet
-				+ ", notificationSet=" + this.notificationSet.toString()
 				+ ", clinicHistory=" + clinicHistory + "]";
 	}
 }

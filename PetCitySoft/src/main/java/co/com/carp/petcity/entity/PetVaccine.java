@@ -23,7 +23,7 @@ public class PetVaccine implements Comparable<PetVaccine> {
 	/**
 	 * Date when vaccine was applied
 	 */
-	private Date applicationDate;
+	private Date appliedDate;
 	
 	
 	/**
@@ -58,14 +58,14 @@ public class PetVaccine implements Comparable<PetVaccine> {
 	 * @return the appliedDate
 	 */
 	public Date getAppliedDate() {
-		return applicationDate;
+		return appliedDate;
 	}
 
 	/**
 	 * @param appliedDate the appliedDate to set
 	 */
-	public void setAppliedDate(Date applicationDate) {
-		this.applicationDate = applicationDate;
+	public void setAppliedDate(Date appliedDate) {
+		this.appliedDate = appliedDate;
 	}
 
 	@Override
@@ -74,7 +74,7 @@ public class PetVaccine implements Comparable<PetVaccine> {
 			return false;
 		}
 		if  (!this.name.equals(((PetVaccine)arg).name)
-				&& !this.applicationDate.equals(((PetVaccine)arg).applicationDate)) {
+				&& !this.appliedDate.equals(((PetVaccine)arg).appliedDate)) {
 			return false;
 		}
 		return true;
@@ -83,17 +83,17 @@ public class PetVaccine implements Comparable<PetVaccine> {
 	@Override
 	public int hashCode() {
 		int hashCode = 85;
-		hashCode = hashCode * this.name.hashCode() + this.applicationDate.hashCode();
+		hashCode = hashCode * this.name.hashCode() + this.appliedDate.hashCode();
 		return hashCode;
 	}
 
 	@Override
 	public String toString() {
-		return "PetVaccine={name:" + this.name + ";appliedDate:" + this.applicationDate.toString() + "}";
+		return "PetVaccine={name:" + this.name + ";appliedDate:" + this.appliedDate.toString() + "}";
 	}
 
 	@Override
 	public int compareTo(PetVaccine anotherPetVaccine) {
-		return this.applicationDate.compareTo(anotherPetVaccine.applicationDate);
+		return this.appliedDate.compareTo(anotherPetVaccine.appliedDate);
 	}
 }

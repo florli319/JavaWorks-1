@@ -1,6 +1,7 @@
 package co.com.carp.petcity.entity;
 
 import java.util.HashSet;
+import java.util.TreeSet;
 
 /**
  * This class is attempt to be an implementation of person, this class represent 
@@ -29,6 +30,11 @@ public class Owner extends Person implements Comparable<Owner> {
 	 * Pet set from owner
 	 */
 	private HashSet<Pet> petSet;
+	
+	/**
+	 * Notification message set
+	 */
+	private TreeSet<Notification> notificationSet;
 	
 	/**
 	 * @return the address
@@ -86,7 +92,19 @@ public class Owner extends Person implements Comparable<Owner> {
 		this.petSet = petSet;
 	}
 
-	
+	/**
+	 * @return the notificationSet
+	 */
+	public TreeSet<Notification> getNotificationSet() {
+		return notificationSet;
+	}
+
+	/**
+	 * @param notificationSet the notificationSet to set
+	 */
+	public void setNotificationSet(TreeSet<Notification> notificationSet) {
+		this.notificationSet = notificationSet;
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
@@ -97,6 +115,8 @@ public class Owner extends Person implements Comparable<Owner> {
 		int result = super.hashCode();
 		result = prime * result + ((address == null) ? 0 : address.hashCode());
 		result = prime * result + cellphone;
+		result = prime * result
+				+ ((notificationSet == null) ? 0 : notificationSet.hashCode());
 		result = prime * result + phone;
 		return result;
 	}
@@ -120,6 +140,11 @@ public class Owner extends Person implements Comparable<Owner> {
 			return false;
 		if (cellphone != other.cellphone)
 			return false;
+		if (notificationSet == null) {
+			if (other.notificationSet != null)
+				return false;
+		} else if (!notificationSet.equals(other.notificationSet))
+			return false;
 		if (phone != other.phone)
 			return false;
 		return true;
@@ -130,7 +155,8 @@ public class Owner extends Person implements Comparable<Owner> {
 		return super.toString() + ";Owner={" + this.address + ";" +
 				"cellphone:" + this.cellphone + ";" +
 				"phone:" + this.phone + ";" +
-				"petSet:" + this.petSet + ";" +				 
+				"petSet:" + this.petSet + ";" + 
+				"notificationSet:" + this.notificationSet.toString() + 
 				";}";
 	}
 

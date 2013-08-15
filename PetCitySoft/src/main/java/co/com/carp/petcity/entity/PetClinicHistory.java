@@ -9,7 +9,7 @@ import java.util.TreeSet;
  * @author Carlos Rodriguez
  *
  */
-public class ClinicHistory {
+public class PetClinicHistory {
 	
 	/**
 	 * Database identification
@@ -29,7 +29,7 @@ public class ClinicHistory {
 	/**
 	 * Pet's medical consultation set
 	 */
-	private TreeSet<MedicalConsultation> consultationSet;
+	private TreeSet<PetMedicalConsultation> consultationSet;
 	
 	/**
 	 * @return the identification
@@ -76,25 +76,25 @@ public class ClinicHistory {
 	/**
 	 * @return the consultationSet
 	 */
-	public TreeSet<MedicalConsultation> getConsultationSet() {
+	public TreeSet<PetMedicalConsultation> getConsultationSet() {
 		return consultationSet;
 	}
 
 	/**
 	 * @param consultationSet the consultationSet to set
 	 */
-	public void setConsultationSet(TreeSet<MedicalConsultation> consultationSet) {
+	public void setConsultationSet(TreeSet<PetMedicalConsultation> consultationSet) {
 		this.consultationSet = consultationSet;
 	}
 
 	@Override
 	public boolean equals(Object arg) {
-		if (arg == null || !(arg instanceof ClinicHistory)) {
+		if (arg == null || !(arg instanceof PetClinicHistory)) {
 			return false;
 		}
-		if  (!this.openDate.equals(((ClinicHistory)arg).openDate)
-				|| this.identification != ((ClinicHistory)arg).identification
-				|| this.userIdentification != ((ClinicHistory)arg).userIdentification) {
+		if  (!this.openDate.equals(((PetClinicHistory)arg).openDate)
+				|| this.identification != ((PetClinicHistory)arg).identification
+				|| this.userIdentification != ((PetClinicHistory)arg).userIdentification) {
 			return false;
 		}
 		return true;

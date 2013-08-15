@@ -8,7 +8,7 @@ import java.util.Date;
  * @author Carlos Rodriguez
  *
  */
-public class PetDrenching {
+public class Drenching {
 	
 	/**
 	 * Identification from database
@@ -69,11 +69,11 @@ public class PetDrenching {
 	
 	@Override
 	public boolean equals(Object arg) {
-		if (arg == null || !(arg instanceof PetDrenching)) {
+		if (arg == null || !(arg instanceof Drenching)) {
 			return false;
 		}
-		if  (!this.productName.equals(((PetDrenching)arg).productName)
-				&& !this.drenchingDate.equals(((PetDrenching)arg).drenchingDate)) {
+		if  (!this.productName.equals(((Drenching)arg).productName)
+				&& !this.drenchingDate.equals(((Drenching)arg).drenchingDate)) {
 			return false;
 		}
 		return true;

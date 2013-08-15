@@ -17,7 +17,7 @@ public class PetVisitInfo {
 	/**
 	 * Pet's weight
 	 */
-	private float weight;
+	private double weight;
 	
 	/**
 	 * Pet's food
@@ -46,14 +46,14 @@ public class PetVisitInfo {
 	/**
 	 * @return the weight
 	 */
-	public float getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 
 	/**
 	 * @param weight the weight to set
 	 */
-	public void setWeight(float weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
